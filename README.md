@@ -545,29 +545,8 @@ VITE_API_URL=http://localhost:5000/api
 2. Create a feature branch
 3. Make your changes
 4. Push to the branch
-5. Open a pull request
+5. Open a pull requet
 
----
-
-## 📄 License
-
-This project is open source and available under the MIT License.
-
----
-
-## 👨‍💻 Author
-
-Built with ❤️ as a full-stack application demo.
-
----
-
-## 📞 Support
-
-For issues or questions:
-1. Check the troubleshooting section above
-2. Review API documentation
-3. Check Postman collection for request examples
-4. Open an issue on GitHub
 
 ---
 
@@ -581,4 +560,3 @@ To get started:
 5. Open http://localhost:3000 in your browser
 6. Register a new account and start managing tasks!
 
-Happy coding! 🚀
