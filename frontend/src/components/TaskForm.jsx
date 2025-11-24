@@ -6,6 +6,7 @@ const TaskForm = ({ onTaskCreated, onTaskUpdated, onCancel, editingTask }) => {
     title: '',
     description: '',
     priority: 'medium',
+    status: 'todo',
     dueDate: '',
   });
   const [loading, setLoading] = useState(false);
@@ -17,6 +18,7 @@ const TaskForm = ({ onTaskCreated, onTaskUpdated, onCancel, editingTask }) => {
         title: editingTask.title,
         description: editingTask.description,
         priority: editingTask.priority,
+        status: editingTask.status || 'todo',
         dueDate: editingTask.dueDate ? editingTask.dueDate.split('T')[0] : '',
       });
     }
@@ -38,7 +40,7 @@ const TaskForm = ({ onTaskCreated, onTaskUpdated, onCancel, editingTask }) => {
       } else {
         await taskAPI.createTask(formData);
         onTaskCreated();
-        setFormData({ title: '', description: '', priority: 'medium', dueDate: '' });
+        setFormData({ title: '', description: '', priority: 'medium', status: 'todo', dueDate: '' });
       }
     } catch (err) {
       setError(err.message || 'Failed to save task');
@@ -103,6 +105,22 @@ const TaskForm = ({ onTaskCreated, onTaskUpdated, onCancel, editingTask }) => {
               onChange={handleChange}
               className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <label className="block text-gray-700 font-semibold mb-2">Status</label>
+            <select
+              name="status"
+              value={formData.status}
+              onChange={handleChange}
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            >
+              <option value="todo">To do</option>
+              <option value="in-progress">In progress</option>
+              <option value="completed">Completed</option>
+            </select>
           </div>
         </div>
 
