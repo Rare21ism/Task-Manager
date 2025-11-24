@@ -307,8 +307,4 @@ curl -X POST http://localhost:5000/api/tasks \
 - [JWT Guide](https://jwt.io/)
 - [MongoDB Documentation](https://docs.mongodb.com/)
 
----
 
-## 📄 License
-
-MIT License - Open source and free to use.
