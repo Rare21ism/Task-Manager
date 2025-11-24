@@ -347,22 +347,6 @@ const response = await taskAPI.getTasks({ status, priority, search });
 
 ---
 
-## 📄 License
-
-MIT License - Open source and free to use.
-
----
-
-## 📞 Support
-
-For issues:
-1. Check the browser console for error messages
-2. Verify backend is running
-3. Check API endpoint URLs
-4. Review main README.md for troubleshooting
-
----
-
 ## 🚀 Next Steps
 
 1. Start development server: `npm run dev`
