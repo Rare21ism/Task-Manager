@@ -1,0 +1,34 @@
+# Node artifacts
+node_modules/
+dist/
+build/
+
+# Local env files
+.env
+backend/.env
+frontend/.env
+
+# Secrets and keys
+backend/secrets/
+frontend/secrets/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+*.log
+
+# npm cache
+npm-debug.log*
+node_modules/
+.env
+.env.local
+.env.*.local
+*.log
+dist/
+build/
+.DS_Store
+.vite
+.env.production
